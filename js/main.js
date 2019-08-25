@@ -1,12 +1,46 @@
-// var backgroundAnim = new TimelineMax({repeat: -1});
 var backgroundAnim = new TimelineMax();
+var fireflies = new TimelineMax({repeat: -1});
 // var loadBackgroundAnim = new TimelineMax();
+var controller = new ScrollMagic.Controller();
 
 var sun = document.querySelector('.sun');
-// var sun = document.querySelectorAll('.tree');
+
+// var reversedFireflies = document.querySelectorAll('.firefly');
+// console.log(reversedFireflies)
+var firefliess = Array.from(document.querySelectorAll('.firefly')).reverse();
+// firefliess = firefliess.reverse();
+
+fireflies
+  .to(firefliess[0], 1, {y: '-=10px', x: '+=200px'})
+  .to(firefliess[0], 1, {y: '-=50px', x: '+=100px'})
+  .to(firefliess[0], 1, {y: '+=50px', x: '-=100px'})
+  .to(firefliess[0], 1, {y: '+=10px', x: '-=200px'})
+  // .to('.firefly_01', 0.2, {onComplete: () => {fireflies.reverse()}})
 
 backgroundAnim
-  .to(sun, 2, {y: '+=100px'})
-  .to(sun, 2, {y: '-=100px'})
-  .to('.tree_02', 2, {x: '+=100px', y: '+=100px'}, '-=2')
-  .to('.tree_02', 2, {x: '-=100px', y: '-=100px'})
+  .fromTo(sun, 1, {y: '-=100px'}, {y: '100%', scale: .5})
+  .to('.mountain', 1, {scale: 0.5, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_line', 1, {scale: 0, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.floor_02', 1, {scale: 0.5, transformOrigin: 'center bottom', autoAlpha: 0.5}, '-=0.7')
+  .to('.tree_05', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_04', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_06', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_07', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_03', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_01', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_09', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_02', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
+  .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
+  .to('.header-background', 2, {y: '-100%'})
+
+
+var backgroundScene = new ScrollMagic.Scene({
+  triggerElement: '.bg-trigger',
+  triggerHook: 0,
+  duration: '150%',
+})
+.setTween(backgroundAnim)
+.setPin('.bg-trigger')
+.addIndicators()
+.addTo(controller)
