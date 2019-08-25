@@ -1,21 +1,20 @@
 var backgroundAnim = new TimelineMax();
-var fireflies = new TimelineMax({repeat: -1});
 // var loadBackgroundAnim = new TimelineMax();
 var controller = new ScrollMagic.Controller();
 
 var sun = document.querySelector('.sun');
 
-// var reversedFireflies = document.querySelectorAll('.firefly');
-// console.log(reversedFireflies)
-var firefliess = Array.from(document.querySelectorAll('.firefly')).reverse();
-// firefliess = firefliess.reverse();
+var fireflies = Array.from(document.querySelectorAll('.firefly')).reverse();
 
-fireflies
-  .to(firefliess[0], 1, {y: '-=10px', x: '+=200px'})
-  .to(firefliess[0], 1, {y: '-=50px', x: '+=100px'})
-  .to(firefliess[0], 1, {y: '+=50px', x: '-=100px'})
-  .to(firefliess[0], 1, {y: '+=10px', x: '-=200px'})
-  // .to('.firefly_01', 0.2, {onComplete: () => {fireflies.reverse()}})
+for (let i = 0; i < fireflies.length; i++) {
+  var firefliesTl = new TimelineMax({repeat: -1});
+
+  firefliesTl
+  .to(fireflies[i], 1, {y: '-=10px', x: '+=200px'})
+  .to(fireflies[i], 1, {y: '-=50px', x: '+=100px'})
+  .to(fireflies[i], 1, {y: '+=50px', x: '-=100px'})
+  .to(fireflies[i], 1, {y: '+=10px', x: '-=200px'})
+}
 
 backgroundAnim
   .fromTo(sun, 1, {y: '-=100px'}, {y: '100%', scale: .5})
