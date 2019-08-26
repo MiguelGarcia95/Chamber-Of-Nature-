@@ -72,4 +72,12 @@ body {
   font-size: 3rem;
   cursor: pointer;
 }
+
+.content {
+  position: absolute;
+}
+
+.content.description {
+  top: 300%;
+}
 /*# sourceMappingURL=styles.css.map */

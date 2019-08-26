@@ -1,12 +1,17 @@
-var backgroundAnim = new TimelineMax();
+function stopFireflies() {
+  // for (let i = 0; i < tlList.length; i++) {
+  //   tlList[i].pause();
+  // }
+}
+
 // var loadBackgroundAnim = new TimelineMax();
+var backgroundAnim = new TimelineMax(),
+    contentAnim = new TimelineMax();
 var controller = new ScrollMagic.Controller();
 
-var sun = document.querySelector('.sun');
-
-var fireflies = Array.from(document.querySelectorAll('.firefly')).reverse();
-
-var tlList = [];
+var sun = document.querySelector('.sun'),
+    fireflies = Array.from(document.querySelectorAll('.firefly')).reverse();
+// var tlList = [];
 
 for (let i = 0; i < fireflies.length; i++) {
   var firefliesTl = new TimelineMax({repeat: -1});
@@ -17,7 +22,7 @@ for (let i = 0; i < fireflies.length; i++) {
   .to(fireflies[i], 10, {y: `-=${yMovement}px`, x: `+=${xMovement}px`})
   .to(fireflies[i], 10, {y: `+=${yMovement}px`, x: `-=${xMovement}px`});
 
-  tlList.push(firefliesTl);
+  // tlList.push(firefliesTl);
 }
 
 backgroundAnim
@@ -50,8 +55,13 @@ var backgroundScene = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
-function stopFireflies() {
-  for (let i = 0; i < tlList.length; i++) {
-    // tlList[i].pause();
-  }
-}
+
+
+var contentScene = new ScrollMagic.Scene({
+  triggerElement: '.content-trigger',
+  triggerHook: '50%',
+  duration: '100%'
+})
+.setPin('.content-trigger')
+.addIndicators()
+.addTo(controller)

@@ -59,4 +59,13 @@ body {background: rgb(29,29,58)}
   }
 }
 
+.content {
+  position: absolute;
+  
+  &.description {
+    top: 300%;
+    
+  }
+}
+
 
