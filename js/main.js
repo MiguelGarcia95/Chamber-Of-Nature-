@@ -6,6 +6,8 @@ var sun = document.querySelector('.sun');
 
 var fireflies = Array.from(document.querySelectorAll('.firefly')).reverse();
 
+var tlList = [];
+
 for (let i = 0; i < fireflies.length; i++) {
   var firefliesTl = new TimelineMax({repeat: -1});
   let xMovement = Math.random() * 500
@@ -13,7 +15,9 @@ for (let i = 0; i < fireflies.length; i++) {
 
   firefliesTl
   .to(fireflies[i], 10, {y: `-=${yMovement}px`, x: `+=${xMovement}px`})
-  .to(fireflies[i], 10, {y: `+=${yMovement}px`, x: `-=${xMovement}px`})
+  .to(fireflies[i], 10, {y: `+=${yMovement}px`, x: `-=${xMovement}px`});
+
+  tlList.push(firefliesTl);
 }
 
 backgroundAnim
@@ -29,8 +33,8 @@ backgroundAnim
   .to('.tree_01', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.tree_09', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.tree_02', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
-  .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
-  .to('.firefly', 3, {transformOrigin: 'center top', scale: 0}, '-=1')
+  .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0, onComplete: stopFireflies})
+  .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
   .to('.header-background', 2, {y: '-100%'})
 
@@ -38,9 +42,15 @@ backgroundAnim
 var backgroundScene = new ScrollMagic.Scene({
   triggerElement: '.bg-trigger',
   triggerHook: 0,
-  duration: '150%',
+  duration: '300%',
 })
 .setTween(backgroundAnim)
 .setPin('.bg-trigger')
 .addIndicators()
-.addTo(controller)
+.addTo(controller);
+
+function stopFireflies() {
+  for (let i = 0; i < tlList.length; i++) {
+    // tlList[i].pause();
+  }
+}
