@@ -41,8 +41,9 @@ backgroundAnim
   .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0, onComplete: stopFireflies})
   .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
-  // .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
+  .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
   .to('.header-content', 1, {y: '-100%'}, '-=6')
+  // .to('.header-background', 1, {y: '-100%'})
 
 
 
