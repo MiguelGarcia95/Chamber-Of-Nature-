@@ -2,10 +2,10 @@
   font-family: 'Fairy Dust B';
   src: url( "../assets/fonts/FairyDustB.ttf") format('truetype');
 }
-// @font-face {
-//   font-family: 'Simple Runes';
-//   src: url( "../assets/fonts/Simple Runes.ttf") format('truetype');
-// }
+@font-face {
+  font-family: 'Simple Runes';
+  src: url( "../assets/fonts/Simple Runes.ttf") format('truetype');
+}
 
 html, body {margin: 0; padding: 0;}
 * {margin: 0; padding: 0;}
@@ -75,25 +75,57 @@ body {background: rgb(29,29,58)}
   width: 100%; 
   height: 400px;
   background: red;
+  &:first-of-type {background: transparent;}
   margin-top: 100px;
   padding: 0 100px;
   box-sizing: border-box;
   position: relative;
+  .description, .description-image {position: absolute;}
+  .text-content {
+    color: white;
+    font-family: 'Simple Runes';
+    font-size: 1.2rem;
+  }
   .description {
     width: 50%; 
     max-width: 500px;
     height: 100%;
-    position: absolute;
   }
   .description-image {
+    width: 50%;
+    width: 800px;
+    right: 0;
+    top: -20%; 
+    height: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .setting {
+    width: 100%;
+    padding-top: 50px;
+  }
+  .setting-images {
+    // Add Flora here 
+  }
+  .order {
+    position: absolute;
     width: 50%; 
     max-width: 500px;
     height: 100%;
+    right: 0;
+  }
+  .order-image {
     position: absolute;
+    width: 50%;
+    left: 50px;
+    top: -20%; 
+    height: 100%;
     img {
       width: 100%;
     }
   }
 }
 
-
+.footer {
+}

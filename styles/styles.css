@@ -3,6 +3,11 @@
   src: url("../assets/fonts/FairyDustB.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Simple Runes';
+  src: url("../assets/fonts/Simple Runes.ttf") format("truetype");
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -97,21 +102,60 @@ body {
   position: relative;
 }
 
+.content:first-of-type {
+  background: transparent;
+}
+
+.content .description, .content .description-image {
+  position: absolute;
+}
+
+.content .text-content {
+  color: white;
+  font-family: 'Simple Runes';
+  font-size: 1.2rem;
+}
+
 .content .description {
   width: 50%;
   max-width: 500px;
   height: 100%;
-  position: absolute;
 }
 
 .content .description-image {
   width: 50%;
-  max-width: 500px;
+  width: 800px;
+  right: 0;
+  top: -20%;
   height: 100%;
-  position: absolute;
 }
 
 .content .description-image img {
+  width: 100%;
+}
+
+.content .setting {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.content .order {
+  position: absolute;
+  width: 50%;
+  max-width: 500px;
+  height: 100%;
+  right: 0;
+}
+
+.content .order-image {
+  position: absolute;
+  width: 50%;
+  left: 50px;
+  top: -20%;
+  height: 100%;
+}
+
+.content .order-image img {
   width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
