@@ -42,15 +42,16 @@ body {background: rgb(29,29,58)}
     margin: auto;
     position: absolute;
     height: 100px;
+    color: white;
   }
   .book_title {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 400;
     top: 15%;
   }
   .scroll-down {
     font-size: 2rem;
-    bottom: 10%;
+    top: 40%;
     .chevron-down {
       font-size: 3rem;
       cursor: pointer;

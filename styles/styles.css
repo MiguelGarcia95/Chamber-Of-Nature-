@@ -54,17 +54,18 @@ body {
   margin: auto;
   position: absolute;
   height: 100px;
+  color: white;
 }
 
 .header-content .book_title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 400;
   top: 15%;
 }
 
 .header-content .scroll-down {
   font-size: 2rem;
-  bottom: 10%;
+  top: 40%;
 }
 
 .header-content .scroll-down .chevron-down {
