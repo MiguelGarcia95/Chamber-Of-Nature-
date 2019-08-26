@@ -41,7 +41,7 @@ backgroundAnim
   .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0, onComplete: stopFireflies})
   .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
-  .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
+  // .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
   .to('.header-content', 1, {autoAlpha: 0})
   // .to('.header-background', 1, {autoAlpha: 0})
 
@@ -59,7 +59,7 @@ var backgroundScene = new ScrollMagic.Scene({
 
 contentAnim
 // .to('.header-background', 1, {y: '-100%'})
-.set('.content', {autoAlpha: 0, display: 'block'})
+// .set('.content', {display: 'block'})
 .to('.description', 1, {autoAlpha: 1})
 .to('.description-image', 1, {autoAlpha: 1})
 .to('.description', 1, {autoAlpha: 0})
@@ -72,8 +72,8 @@ contentAnim
 
 var contentScene = new ScrollMagic.Scene({
   triggerElement: '.content-trigger',
-  triggerHook: 0,
-  duration: '100%'
+  triggerHook: '50%',
+  duration: '200%'
 })
 .setTween(contentAnim)
 .setPin('.content-trigger')

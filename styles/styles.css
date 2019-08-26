@@ -78,10 +78,14 @@ body {
 
 .content-trigger {
   position: relative;
-  top: 200%;
+}
+
+.content-container {
+  position: relative;
 }
 
 .content {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 /*# sourceMappingURL=styles.css.map */

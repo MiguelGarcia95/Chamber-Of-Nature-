@@ -64,12 +64,16 @@ body {background: rgb(29,29,58)}
 
 .content-trigger {
   position: relative;
-
-  top: 200%;
+  // top: 200%;
+}
+.content-container {
+  // height: 1200px;
+  position: relative;
 }
 .content {
-  display: none;
-  // position: absolute;
+  // display: none;
+  opacity: 0;
+  position: absolute;
   
   &.description {
     // top: -100%;
