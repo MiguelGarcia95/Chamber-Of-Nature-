@@ -24,7 +24,7 @@ backgroundAnim
   .fromTo(sun, 1, {y: '-=100px'}, {y: '100%', scale: .5})
   .to('.mountain', 1, {scale: 0.5, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.tree_line', 1, {scale: 0, transformOrigin: 'center bottom', autoAlpha: 0})
-  .to('.floor_02', 1, {scale: 0.5, transformOrigin: 'center bottom', autoAlpha: 0.5}, '-=0.7')
+  .to('.floor_02', 2, {scale: 0, transformOrigin: 'center bottom', autoAlpha: 0.5}, '-=0.7')
   .to('.tree_05', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.tree_04', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.tree_06', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
@@ -36,6 +36,7 @@ backgroundAnim
   .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0, onComplete: stopFireflies})
   .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
+  .to('.header-content', 2, {y: '-100%'}, '-=1')
   .to('.header-background', 2, {y: '-100%'})
 
 
