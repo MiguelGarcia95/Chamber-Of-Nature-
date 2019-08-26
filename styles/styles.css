@@ -87,9 +87,12 @@ body {
 
 .content {
   opacity: 0;
-  position: absolute;
-  width: 400px;
+  position: fixed;
+  width: 100%;
   height: 400px;
   background: red;
+  bottom: 0;
+  top: 0;
+  margin: auto;
 }
 /*# sourceMappingURL=styles.css.map */
