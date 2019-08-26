@@ -15,8 +15,8 @@ body {background: rgb(29,29,58)}
   height: 100vh;
   max-height: 100%;
   width: 100%;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .header-background {
@@ -36,6 +36,8 @@ body {background: rgb(29,29,58)}
   position: absolute;
   width: 100%;
   height: 100%;
+  height: 100vh;
+  max-height: 100%;
   font-family: 'Fairy Dust B';
   text-align: center;
   .book_title, .scroll-down {
@@ -61,7 +63,8 @@ body {background: rgb(29,29,58)}
 }
 
 .content-trigger {
-  position: absolute ;
+  position: relative;
+
   top: 200%;
 }
 .content {

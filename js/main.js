@@ -42,8 +42,8 @@ backgroundAnim
   .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
   .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
-  .to('.header-content', 1, {y: '-100%'}, '-=6')
-  // .to('.header-background', 1, {y: '-100%'})
+  .to('.header-content', 1, {autoAlpha: 0})
+  // .to('.header-background', 1, {autoAlpha: 0})
 
 
 
@@ -58,7 +58,7 @@ var backgroundScene = new ScrollMagic.Scene({
 .addTo(controller);
 
 contentAnim
-.to('.header-background', 1, {y: '-100%'})
+// .to('.header-background', 1, {y: '-100%'})
 .set('.content', {autoAlpha: 0, display: 'block'})
 .to('.description', 1, {autoAlpha: 1})
 .to('.description-image', 1, {autoAlpha: 1})
