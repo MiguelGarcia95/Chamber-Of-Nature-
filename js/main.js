@@ -43,7 +43,7 @@ backgroundAnim
   .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
   // .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
   .to('.header-content', 1, {autoAlpha: 0})
-  // .to('.header-background', 1, {autoAlpha: 0})
+  .to('.header-background', 1, {autoAlpha: 0})
 
 
 
