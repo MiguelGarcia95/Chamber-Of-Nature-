@@ -69,21 +69,30 @@ body {background: rgb(29,29,58)}
 .content-container {
   // height: 1200px;
   position: relative;
+  padding-top: 400px;
 }
 .content {
-  // display: none;
-  opacity: 0;
-  position: fixed;
   width: 100%; 
   height: 400px;
   background: red;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  
+  margin-top: 100px;
+  padding: 0 100px;
+  box-sizing: border-box;
+  position: relative;
   .description {
-    // top: -100%;
-    
+    width: 50%; 
+    max-width: 500px;
+    height: 100%;
+    position: absolute;
+  }
+  .description-image {
+    width: 50%; 
+    max-width: 500px;
+    height: 100%;
+    position: absolute;
+    img {
+      width: 100%;
+    }
   }
 }
 

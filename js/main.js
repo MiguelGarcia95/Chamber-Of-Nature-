@@ -58,23 +58,23 @@ var backgroundScene = new ScrollMagic.Scene({
 .addTo(controller);
 
 contentAnim
-// .to('.header-background', 1, {y: '-100%'})
-// .set('.content', {display: 'block'})
-.to('.content-first', 1, {autoAlpha: 1})
-// .to('.description-image', 1, {autoAlpha: 1})
-.to('.content-first', 1, {autoAlpha: 0})
-// .to('.description-image', 1, {autoAlpha: 0})
-.to('.content-second', 1, {autoAlpha: 1})
-// .to('.order-image', 1, {autoAlpha: 1})
-.to('.content-second', 1, {autoAlpha: 0})
-// .to('.order-image', 1, {autoAlpha: 0})
-.to('.content-third', 1, {autoAlpha: 1})
-.to('.content-third', 1, {autoAlpha: 0})
+// // .to('.header-background', 1, {y: '-100%'})
+// // .set('.content', {display: 'block'})
+// .to('.content-first', 1, {autoAlpha: 1})
+// // .to('.description-image', 1, {autoAlpha: 1})
+// .to('.content-first', 1, {autoAlpha: 0})
+// // .to('.description-image', 1, {autoAlpha: 0})
+// .to('.content-second', 1, {autoAlpha: 1})
+// // .to('.order-image', 1, {autoAlpha: 1})
+// .to('.content-second', 1, {autoAlpha: 0})
+// // .to('.order-image', 1, {autoAlpha: 0})
+// .to('.content-third', 1, {autoAlpha: 1})
+// .to('.content-third', 1, {autoAlpha: 0})
 
 var contentScene = new ScrollMagic.Scene({
   triggerElement: '.content-trigger',
-  triggerHook: '50%',
-  duration: '200%'
+  triggerHook: 0,
+  duration: '100%'
 })
 .setTween(contentAnim)
 .setPin('.content-trigger')
