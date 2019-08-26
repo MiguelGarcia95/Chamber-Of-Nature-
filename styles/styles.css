@@ -28,7 +28,8 @@ body {
 .header-background {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  max-height: 100%;
   overflow: hidden;
 }
 
@@ -73,11 +74,12 @@ body {
   cursor: pointer;
 }
 
-.content {
+.content-trigger {
   position: absolute;
+  top: 200%;
 }
 
-.content.description {
-  top: 300%;
+.content {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

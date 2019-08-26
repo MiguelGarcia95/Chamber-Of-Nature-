@@ -41,8 +41,9 @@ backgroundAnim
   .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0, onComplete: stopFireflies})
   .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 5, transformOrigin: 'center bottom'})
-  .to('.header-content', 2, {y: '-100%'}, '-=1')
-  .to('.header-background', 2, {y: '-100%'})
+  // .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
+  .to('.header-content', 1, {y: '-100%'}, '-=6')
+
 
 
 var backgroundScene = new ScrollMagic.Scene({
@@ -55,13 +56,25 @@ var backgroundScene = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
+contentAnim
+.to('.header-background', 1, {y: '-100%'})
+.set('.content', {autoAlpha: 0, display: 'block'})
+.to('.description', 1, {autoAlpha: 1})
+.to('.description-image', 1, {autoAlpha: 1})
+.to('.description', 1, {autoAlpha: 0})
+.to('.description-image', 1, {autoAlpha: 0})
+.to('.order', 1, {autoAlpha: 1})
+.to('.order-image', 1, {autoAlpha: 1})
+.to('.order', 1, {autoAlpha: 0})
+.to('.order-image', 1, {autoAlpha: 0})
 
 
 var contentScene = new ScrollMagic.Scene({
   triggerElement: '.content-trigger',
-  triggerHook: '50%',
+  triggerHook: 0,
   duration: '100%'
 })
+.setTween(contentAnim)
 .setPin('.content-trigger')
 .addIndicators()
 .addTo(controller)
