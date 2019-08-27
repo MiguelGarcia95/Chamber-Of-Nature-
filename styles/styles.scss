@@ -67,53 +67,60 @@ body {background: rgb(29,29,58)}
   top: -50vh !important;
   width: 1000px;
   margin: auto;
-  .content-title {
-    font-family: 'Fairy Dust B';
-    font-size: 3rem;
-    padding: 20px 0;
-    color: white;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    text-align: center;
-  }
 }
 .content {
   width: 100%; 
   height: 500px;
+  padding: 0 100px;
   box-sizing: border-box;
   position: relative;
-  color: white;
-  // font-family: 'Fairy Dust B';
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
-  
-  &.description {
-    // width: 50%; 
-    // max-width: 500px;
-    // height: 100%;
+  .description, .description-image, .order, .order-image {position: absolute;}
+  .text-content {
+    color: white;
+    // font-family: 'Fairy Dust B';
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
   }
-  &.description-image {
-    width: 75%; height: 100%;
-    margin: auto;
-    img {width: 100%;}
+  .description {
+    width: 50%; 
+    max-width: 500px;
+    height: 100%;
   }
-  &.setting {
+  .description-image {
+    width: 50%;
+    width: 800px;
+    right: 0;
+    top: -20%; 
+    height: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .setting {
     width: 100%;
     padding-top: 50px;
   }
-  &.setting-images {
+  .setting-images {
     // Add Flora here 
   }
-  &.order {
+  .order {
+    width: 400px;
     height: 100%;
-    right: 0px;
+    right: 50px;
     text-align: center;
-
+    h3 {
+      font-family: 'Fairy Dust B';
+      font-size: 2rem;
+      padding: 20px 0;
+      color: white;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
     .form {
       margin: auto;
-      width: 400px;
+      width: 75%;
       height: 80px;
-      // position: absolute;
+      position: absolute;
       top: 0; bottom: 0;
       left: 0; right: 0;
       #select {
@@ -143,13 +150,12 @@ body {background: rgb(29,29,58)}
       }
     }
   }
-  &.order-image {
-    // width: 800px;
-    // left: 50px;
-    // height: 400px;
-    // bottom: 0;
+  .order-image {
+    width: 800px;
+    left: 50px;
+    height: 400px;
+    bottom: 0;
     margin: auto;
-    width: 50%;
     img {
       width: 100%;
       height: 100%;

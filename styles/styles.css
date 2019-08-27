@@ -88,73 +88,90 @@ body {
   margin: auto;
 }
 
-.content-container .content-title {
-  font-family: 'Fairy Dust B';
-  font-size: 3rem;
-  padding: 20px 0;
-  color: white;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  text-align: center;
-}
-
 .content {
   width: 100%;
   height: 500px;
+  padding: 0 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+}
+
+.content .description, .content .description-image, .content .order, .content .order-image {
+  position: absolute;
+}
+
+.content .text-content {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
 
-.content.description-image {
-  width: 75%;
+.content .description {
+  width: 50%;
+  max-width: 500px;
   height: 100%;
-  margin: auto;
 }
 
-.content.description-image img {
+.content .description-image {
+  width: 50%;
+  width: 800px;
+  right: 0;
+  top: -20%;
+  height: 100%;
+}
+
+.content .description-image img {
   width: 100%;
 }
 
-.content.setting {
+.content .setting {
   width: 100%;
   padding-top: 50px;
 }
 
-.content.order {
+.content .order {
+  width: 400px;
   height: 100%;
-  right: 0px;
+  right: 50px;
   text-align: center;
 }
 
-.content.order .form {
+.content .order h3 {
+  font-family: 'Fairy Dust B';
+  font-size: 2rem;
+  padding: 20px 0;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.content .order .form {
   margin: auto;
-  width: 400px;
+  width: 75%;
   height: 80px;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-.content.order .form #select {
+.content .order .form #select {
   height: 40px;
   overflow: hidden;
   position: relative;
 }
 
-.content.order .form #select.open {
+.content .order .form #select.open {
   height: 160px;
 }
 
-.content.order .form #select.open li {
+.content .order .form #select.open li {
   position: relative;
 }
 
-.content.order .form #select li {
+.content .order .form #select li {
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -164,26 +181,29 @@ body {
   cursor: pointer;
 }
 
-.content.order .form #select li.select-options {
+.content .order .form #select li.select-options {
   z-index: 1;
 }
 
-.content.order .form #select li.selected {
+.content .order .form #select li.selected {
   z-index: 3;
 }
 
-.content.order .form button {
+.content .order .form button {
   width: 100%;
   border: none;
   height: 40px;
 }
 
-.content.order-image {
+.content .order-image {
+  width: 800px;
+  left: 50px;
+  height: 400px;
+  bottom: 0;
   margin: auto;
-  width: 50%;
 }
 
-.content.order-image img {
+.content .order-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
