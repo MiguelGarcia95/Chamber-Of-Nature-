@@ -94,49 +94,32 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-}
-
-.content .description, .content .description-image, .content .order, .content .order-image {
-  position: absolute;
-}
-
-.content .text-content {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
 
-.content .description {
-  width: 50%;
-  max-width: 500px;
-  height: 100%;
+.content.description-image {
+  width: 100%;
+  margin: auto;
 }
 
-.content .description-image {
-  width: 50%;
-  width: 800px;
-  right: 0;
-  top: -20%;
-  height: 100%;
-}
-
-.content .description-image img {
+.content.description-image img {
   width: 100%;
 }
 
-.content .setting {
+.content.setting {
   width: 100%;
   padding-top: 50px;
 }
 
-.content .order {
-  width: 400px;
+.content.order {
   height: 100%;
   right: 0px;
   text-align: center;
 }
 
-.content .order h3 {
+.content.order h3 {
   font-family: 'Fairy Dust B';
   font-size: 2rem;
   padding: 20px 0;
@@ -145,9 +128,9 @@ body {
   text-transform: capitalize;
 }
 
-.content .order .form {
+.content.order .form {
   margin: auto;
-  width: 75%;
+  width: 400px;
   height: 80px;
   position: absolute;
   top: 0;
@@ -156,21 +139,21 @@ body {
   right: 0;
 }
 
-.content .order .form #select {
+.content.order .form #select {
   height: 40px;
   overflow: hidden;
   position: relative;
 }
 
-.content .order .form #select.open {
+.content.order .form #select.open {
   height: 160px;
 }
 
-.content .order .form #select.open li {
+.content.order .form #select.open li {
   position: relative;
 }
 
-.content .order .form #select li {
+.content.order .form #select li {
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -180,29 +163,26 @@ body {
   cursor: pointer;
 }
 
-.content .order .form #select li.select-options {
+.content.order .form #select li.select-options {
   z-index: 1;
 }
 
-.content .order .form #select li.selected {
+.content.order .form #select li.selected {
   z-index: 3;
 }
 
-.content .order .form button {
+.content.order .form button {
   width: 100%;
   border: none;
   height: 40px;
 }
 
-.content .order-image {
-  width: 800px;
-  left: 50px;
-  height: 400px;
-  bottom: 0;
+.content.order-image {
   margin: auto;
+  width: 50%;
 }
 
-.content .order-image img {
+.content.order-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

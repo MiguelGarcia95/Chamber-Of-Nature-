@@ -73,37 +73,29 @@ body {background: rgb(29,29,58)}
   height: 500px;
   box-sizing: border-box;
   position: relative;
-  .description, .description-image, .order, .order-image {position: absolute;}
-  .text-content {
-    color: white;
-    // font-family: 'Fairy Dust B';
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
+  color: white;
+  // font-family: 'Fairy Dust B';
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  &.description {
+    // width: 50%; 
+    // max-width: 500px;
+    // height: 100%;
   }
-  .description {
-    width: 50%; 
-    max-width: 500px;
-    height: 100%;
+  &.description-image {
+    width: 100%;
+    margin: auto;
+    img {width: 100%;}
   }
-  .description-image {
-    width: 50%;
-    width: 800px;
-    right: 0;
-    top: -20%; 
-    height: 100%;
-    img {
-      width: 100%;
-    }
-  }
-  .setting {
+  &.setting {
     width: 100%;
     padding-top: 50px;
   }
-  .setting-images {
+  &.setting-images {
     // Add Flora here 
   }
-  .order {
-    width: 400px;
+  &.order {
+    // width: 400px;
     height: 100%;
     right: 0px;
     text-align: center;
@@ -117,7 +109,7 @@ body {background: rgb(29,29,58)}
     }
     .form {
       margin: auto;
-      width: 75%;
+      width: 400px;
       height: 80px;
       position: absolute;
       top: 0; bottom: 0;
@@ -149,12 +141,13 @@ body {background: rgb(29,29,58)}
       }
     }
   }
-  .order-image {
-    width: 800px;
-    left: 50px;
-    height: 400px;
-    bottom: 0;
+  &.order-image {
+    // width: 800px;
+    // left: 50px;
+    // height: 400px;
+    // bottom: 0;
     margin: auto;
+    width: 50%;
     img {
       width: 100%;
       height: 100%;
