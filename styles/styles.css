@@ -155,18 +155,45 @@ body {
   text-transform: capitalize;
 }
 
-.content .order .form select {
-  width: 100%;
-  height: 40px;
+.content .order .form {
+  margin: auto;
+  width: 75%;
 }
 
-.content .order .form select option {
-  width: 100%;
+.content .order .form #select {
   height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content .order .form #select.open {
+  height: 160px;
+}
+
+.content .order .form #select.open li {
+  position: relative;
+}
+
+.content .order .form #select .selected {
+  color: green;
+  z-index: 3;
+}
+
+.content .order .form #select li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  list-style: none;
+  line-height: 40px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.content .order .form #select li.select-options {
+  z-index: 2;
 }
 
 .content .order .form button {
-  margin: auto;
   width: 100%;
   display: block;
 }

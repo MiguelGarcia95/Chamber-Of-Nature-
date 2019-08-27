@@ -1,7 +1,33 @@
-function stopFireflies() {
-  // for (let i = 0; i < tlList.length; i++) {
-  //   tlList[i].pause();
-  // }
+var isMenuOpen = true;
+var selectButton = document.getElementById('select');
+var selectOptions = document.querySelectorAll('.select-options');
+toggleMenu();
+function toggleMenu() {
+  if (isMenuOpen) {
+    selectButton.classList.add('open');
+  } else {
+    selectButton.classList.remove('open');
+  }
+}
+
+
+selectButton.addEventListener('click', function() {
+  isMenuOpen = !isMenuOpen;
+  console.log(isMenuOpen);
+  toggleMenu();
+})
+
+for (let i = 0; i < selectOptions.length; i++) {
+  selectOptions[i].addEventListener('click', function() {
+    for (let j = 0; j < selectOptions.length; j++) {
+      if (selectOptions[j].classList.contains('selected')) {
+        console.log('r')
+        selectOptions[j].classList.remove('selected');
+      }
+    }
+    this.classList.add('selected');
+  })
+  
 }
 
 // var loadBackgroundAnim = new TimelineMax();
@@ -11,7 +37,6 @@ var controller = new ScrollMagic.Controller();
 
 var sun = document.querySelector('.sun'),
     fireflies = Array.from(document.querySelectorAll('.firefly')).reverse();
-// var tlList = [];
 
 for (let i = 0; i < fireflies.length; i++) {
   var firefliesTl = new TimelineMax({repeat: -1});
@@ -21,8 +46,6 @@ for (let i = 0; i < fireflies.length; i++) {
   firefliesTl
   .to(fireflies[i], 10, {y: `-=${yMovement}px`, x: `+=${xMovement}px`})
   .to(fireflies[i], 10, {y: `+=${yMovement}px`, x: `-=${xMovement}px`});
-
-  // tlList.push(firefliesTl);
 }
 
 backgroundAnim
@@ -38,7 +61,7 @@ backgroundAnim
   .to('.tree_01', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.tree_09', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.tree_02', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
-  .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0, onComplete: stopFireflies})
+  .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 7, transformOrigin: 'center bottom'})
   // .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
