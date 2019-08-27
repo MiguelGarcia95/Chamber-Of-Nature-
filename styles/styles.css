@@ -97,6 +97,7 @@ body {
           box-sizing: border-box;
   position: relative;
   color: white;
+  margin-bottom: 50px;
 }
 
 .content .description, .content .description-image, .content .order, .content .order-image {
@@ -118,6 +119,7 @@ body {
   width: 50%;
   max-width: 500px;
   height: 100%;
+  padding-top: 50px;
 }
 
 .content .description-image {
@@ -137,11 +139,16 @@ body {
   padding-top: 50px;
 }
 
+.content.content-third {
+  text-align: right;
+}
+
 .content .order {
-  width: 400px;
+  width: 50%;
   height: 100%;
-  right: 50px;
+  right: 0%;
   text-align: center;
+  padding-top: 50px;
 }
 
 .content .order h3 {
@@ -203,11 +210,12 @@ body {
 }
 
 .content .order-image {
-  width: 800px;
+  width: 500px;
   left: 50px;
-  height: 400px;
   bottom: 0;
   margin: auto;
+  left: 0%;
+  top: -20%;
 }
 
 .content .order-image img {

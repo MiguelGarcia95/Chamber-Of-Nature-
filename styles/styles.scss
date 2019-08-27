@@ -75,6 +75,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
   box-sizing: border-box;
   position: relative;
   color: white;
+  margin-bottom: 50px;
   .description, .description-image, .order, .order-image {position: absolute;}
   .content-title{
     font-size: 6rem;
@@ -90,6 +91,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     width: 50%; 
     max-width: 500px;
     height: 100%;
+    padding-top: 50px;
   }
   .description-image {
     width: 50%;
@@ -108,11 +110,16 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
   .setting-images {
     // Add Flora here 
   }
+  &.content-third {
+    text-align: right;
+  }
   .order {
-    width: 400px;
+    width: 50%; 
     height: 100%;
-    right: 50px;
+    right: 0%;
     text-align: center;
+    padding-top: 50px;
+    
     h3 {
       font-family: 'Fairy Dust B';
       font-size: 2rem;
@@ -156,11 +163,13 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     }
   }
   .order-image {
-    width: 800px;
+    width: 500px;
     left: 50px;
-    height: 400px;
+    // height: 400px;
     bottom: 0;
     margin: auto;
+    left: 0%;
+    top: -20%; 
     img {
       width: 100%;
       height: 100%;
