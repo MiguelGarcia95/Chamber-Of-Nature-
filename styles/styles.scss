@@ -69,11 +69,12 @@ body {background: rgb(29,29,58)}
   margin: auto;
   .content-title {
     font-family: 'Fairy Dust B';
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 20px 0;
     color: white;
     letter-spacing: 2px;
     text-transform: capitalize;
+    text-align: center;
   }
 }
 .content {
@@ -104,7 +105,6 @@ body {background: rgb(29,29,58)}
     // Add Flora here 
   }
   &.order {
-    // width: 400px;
     height: 100%;
     right: 0px;
     text-align: center;
@@ -113,7 +113,7 @@ body {background: rgb(29,29,58)}
       margin: auto;
       width: 400px;
       height: 80px;
-      position: absolute;
+      // position: absolute;
       top: 0; bottom: 0;
       left: 0; right: 0;
       #select {

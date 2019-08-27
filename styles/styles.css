@@ -90,11 +90,12 @@ body {
 
 .content-container .content-title {
   font-family: 'Fairy Dust B';
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 20px 0;
   color: white;
   letter-spacing: 2px;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .content {
@@ -133,7 +134,6 @@ body {
   margin: auto;
   width: 400px;
   height: 80px;
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
