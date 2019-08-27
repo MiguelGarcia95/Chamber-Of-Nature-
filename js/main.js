@@ -32,14 +32,10 @@ function selectMenu() {
 
 selectMenu()
 
-
-
 // var loadBackgroundAnim = new TimelineMax();
 var backgroundAnim = new TimelineMax(),
-    contentAnim = new TimelineMax();
-var controller = new ScrollMagic.Controller();
-
-var sun = document.querySelector('.sun'),
+    controller = new ScrollMagic.Controller(),
+    sun = document.querySelector('.sun'),
     fireflies = Array.from(document.querySelectorAll('.firefly')).reverse();
 
 for (let i = 0; i < fireflies.length; i++) {
@@ -83,27 +79,3 @@ var backgroundScene = new ScrollMagic.Scene({
 .setPin('.bg-trigger')
 .addIndicators()
 .addTo(controller);
-
-contentAnim
-// // .to('.header-background', 1, {y: '-100%'})
-// // .set('.content', {display: 'block'})
-// .to('.content-first', 1, {autoAlpha: 1})
-// // .to('.description-image', 1, {autoAlpha: 1})
-// .to('.content-first', 1, {autoAlpha: 0})
-// // .to('.description-image', 1, {autoAlpha: 0})
-// .to('.content-second', 1, {autoAlpha: 1})
-// // .to('.order-image', 1, {autoAlpha: 1})
-// .to('.content-second', 1, {autoAlpha: 0})
-// // .to('.order-image', 1, {autoAlpha: 0})
-// .to('.content-third', 1, {autoAlpha: 1})
-// .to('.content-third', 1, {autoAlpha: 0})
-
-var contentScene = new ScrollMagic.Scene({
-  triggerElement: '.content-trigger',
-  triggerHook: 0,
-  duration: '100%'
-})
-.setTween(contentAnim)
-.setPin('.content-trigger')
-.addIndicators()
-.addTo(controller)
