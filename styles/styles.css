@@ -20,6 +20,7 @@ html, body {
 
 body {
   background: #1d1d3a;
+  overflow-x: hidden;
 }
 
 #header {
@@ -122,7 +123,7 @@ body {
 .content .description-image {
   width: 50%;
   width: 800px;
-  right: 0;
+  right: -25%;
   top: -20%;
   height: 100%;
 }

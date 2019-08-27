@@ -10,7 +10,7 @@
 html, body {margin: 0; padding: 0;}
 * {margin: 0; padding: 0;}
 
-body {background: rgb(29,29,58)}
+body {background: rgb(29,29,58); overflow-x: hidden;}
 #header {
   height: 100vh;
   max-height: 100%;
@@ -94,7 +94,7 @@ body {background: rgb(29,29,58)}
   .description-image {
     width: 50%;
     width: 800px;
-    right: 0;
+    right: -25%;
     top: -20%; 
     height: 100%;
     img {
