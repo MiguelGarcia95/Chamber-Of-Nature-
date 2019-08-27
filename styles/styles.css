@@ -84,12 +84,13 @@ body {
 .content-container {
   position: relative;
   top: -50vh !important;
+  width: 1000px;
+  margin: auto;
 }
 
 .content {
   width: 100%;
   height: 500px;
-  padding: 0 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -101,7 +102,7 @@ body {
 
 .content .text-content {
   color: white;
-  font-family: 'Simple Runes';
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
 
@@ -131,7 +132,7 @@ body {
 .content .order {
   width: 400px;
   height: 100%;
-  right: 50px;
+  right: 0px;
   text-align: center;
 }
 
@@ -197,7 +198,6 @@ body {
   width: 800px;
   left: 50px;
   height: 400px;
-  top: 0;
   bottom: 0;
   margin: auto;
 }
