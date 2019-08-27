@@ -132,30 +132,24 @@ body {background: rgb(29,29,58)}
         position: relative;
         &.open {
           height: 160px;
-          li {
-            position: relative;
-          }
-        }
-        .selected {
-          color: green;
-          z-index: 3;
+          li {position: relative;}
         }
         li {
           position: absolute;
-          z-index: 1;
+          z-index: 2;
           width: 100%;
           list-style: none;
           line-height: 40px;
           background-color: white;
           cursor: pointer;
-          &.select-options {
-            z-index: 2;
-          }
+          &.select-options {z-index: 1;}
+          &.selected {z-index: 3;}
         }
       }
       button {
         width: 100%;
-        display: block;
+        border: none;
+        height: 40px;
       }
     }
   }

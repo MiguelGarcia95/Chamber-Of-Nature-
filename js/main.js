@@ -1,34 +1,38 @@
-var isMenuOpen = true;
-var selectButton = document.getElementById('select');
-var selectOptions = document.querySelectorAll('.select-options');
-toggleMenu();
-function toggleMenu() {
-  if (isMenuOpen) {
-    selectButton.classList.add('open');
-  } else {
-    selectButton.classList.remove('open');
+function selectMenu() {
+  var isMenuOpen = false;
+  var selectButton = document.getElementById('select');
+  var selectOptions = document.querySelectorAll('.select-options');
+  toggleMenu();
+
+  function toggleMenu() {
+    if (isMenuOpen) {
+      selectButton.classList.add('open');
+    } else {
+      selectButton.classList.remove('open');
+    }
+  }
+
+
+  selectButton.addEventListener('click', function() {
+    isMenuOpen = !isMenuOpen;
+    toggleMenu();
+  })
+
+  for (let i = 0; i < selectOptions.length; i++) {
+    selectOptions[i].addEventListener('click', function() {
+      for (let j = 0; j < selectOptions.length; j++) {
+        if (selectOptions[j].classList.contains('selected')) {
+          selectOptions[j].classList.remove('selected');
+        }
+      }
+      this.classList.add('selected');
+    })
   }
 }
 
+selectMenu()
 
-selectButton.addEventListener('click', function() {
-  isMenuOpen = !isMenuOpen;
-  console.log(isMenuOpen);
-  toggleMenu();
-})
 
-for (let i = 0; i < selectOptions.length; i++) {
-  selectOptions[i].addEventListener('click', function() {
-    for (let j = 0; j < selectOptions.length; j++) {
-      if (selectOptions[j].classList.contains('selected')) {
-        console.log('r')
-        selectOptions[j].classList.remove('selected');
-      }
-    }
-    this.classList.add('selected');
-  })
-  
-}
 
 // var loadBackgroundAnim = new TimelineMax();
 var backgroundAnim = new TimelineMax(),
