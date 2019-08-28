@@ -105,6 +105,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     .content-title {
       right: -10%;
       position: absolute;
+      z-index: 3;
     }
   }
   .order {
@@ -117,6 +118,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
       margin: auto;
       top: 150px; 
       left: 0; right: 0;
+      z-index: 2;
       // box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.5);
       font-size: 1rem;
       input {
@@ -273,6 +275,59 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
 
 
 @media (max-width: 850px) {
+  .content {
+    height: 600px;
+    height: auto;
+    .content-title{
+      font-size: 4rem;
+      left: unset;
+      text-align: center;
+      position: relative; 
+    }
+    .description {
+      @include sizeAndPos(100%, auto, relative);
+      padding-top: 0px;
+      margin-top: 0;
+    }
+    .description-image {
+      @include sizeAndPos(75%, auto, relative);
+      right: unset;
+      top: unset; 
+      margin: auto;
+      padding: 25px 0;
+    }
+    .setting {
+      @include sizeAndPos(100%, auto, relative);
+      margin-top: 0;
+      padding: 50px 0;
+    }
+    &.content-third {
+      height: auto;
+      .content-title {
+        right: unset;
+        position: relative;
+        text-align: center;
+      }
+    }
+    .order {
+      @include sizeAndPos(100%, auto, relative);
+      text-align: center;
+      right: unset;
+      height: 450px;
+      padding-top: 50px;
+      .form {top: 50px;}
+    }
+    .order-image {
+      @include sizeAndPos(100%, auto, relative);
+      left: unset;
+      top: unset; 
+    }
+  }
+}
+
+
+
+@media (max-width: 550px) {
   .content-container {
     // @include sizeAndPos(700px, auto, relative);
 
@@ -320,29 +375,35 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
       // img {width: 100%;}
     }
     .setting {
-      @include sizeAndPos(100%, 100%, relative);
       @include sizeAndPos(100%, auto, relative);
 
-      // margin-top: 5rem;
+      margin-top: 0;
       // left: 0%;
+      padding: 50px 0;
 
-      // padding-top: 50px;
     }
     &.content-third {
-      // height: 600px;
+      height: auto;
       .content-title {
-        right: -3%;
+        right: unset;
+        // width: 100%;
+        position: relative;
+        text-align: center;
       }
     }
     .order {
       // @include sizeAndPos(50%, 100%, absolute);
       // @include sizeAndPos(45%, 100%, absolute);
-      // right: 0%;
-      // padding-top: 50px;
+      @include sizeAndPos(100%, auto, relative);
+      text-align: center;
+
+      right: unset;
+      height: 450px;
+      padding-top: 50px;
       .form {
         // @include sizeAndPos(75%, 200px, absolute);
         // margin: auto;
-        // top: 150px; 
+        top: 50px; 
         // left: 0; right: 0;
         // font-size: 1rem;
         input {
@@ -371,12 +432,14 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     }
     .order-image {
       // @include sizeAndPos(500px, auto, absolute);
+      @include sizeAndPos(100%, auto, relative);
+
       // bottom: unset;
       // margin: auto;
-      // left: -18%;
+      left: unset;
 
 
-      // top: -20%; 
+      top: unset; 
       img {
         // @include sizeAndPos(100%, 100%, relative);
       }

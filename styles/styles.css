@@ -146,6 +146,7 @@ body {
 .content.content-third .content-title {
   right: -10%;
   position: absolute;
+  z-index: 3;
 }
 
 .content .order {
@@ -165,6 +166,7 @@ body {
   top: 150px;
   left: 0;
   right: 0;
+  z-index: 2;
   font-size: 1rem;
 }
 
@@ -425,15 +427,101 @@ body {
     padding: 25px 0;
   }
   .content .setting {
-    height: 100%;
-    width: 100%;
-    position: relative;
     height: auto;
     width: 100%;
     position: relative;
+    margin-top: 0;
+    padding: 50px 0;
+  }
+  .content.content-third {
+    height: auto;
   }
   .content.content-third .content-title {
-    right: -3%;
+    right: unset;
+    position: relative;
+    text-align: center;
+  }
+  .content .order {
+    height: auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    right: unset;
+    height: 450px;
+    padding-top: 50px;
+  }
+  .content .order .form {
+    top: 50px;
+  }
+  .content .order-image {
+    height: auto;
+    width: 100%;
+    position: relative;
+    left: unset;
+    top: unset;
+  }
+}
+
+@media (max-width: 550px) {
+  .content {
+    height: 600px;
+    height: auto;
+  }
+  .content .content-title {
+    font-size: 4rem;
+    left: unset;
+    text-align: center;
+    position: relative;
+  }
+  .content .description {
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding-top: 0px;
+    margin-top: 0;
+  }
+  .content .description-image {
+    height: auto;
+    width: 75%;
+    position: relative;
+    right: unset;
+    top: unset;
+    margin: auto;
+    padding: 25px 0;
+  }
+  .content .setting {
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+    padding: 50px 0;
+  }
+  .content.content-third {
+    height: auto;
+  }
+  .content.content-third .content-title {
+    right: unset;
+    position: relative;
+    text-align: center;
+  }
+  .content .order {
+    height: auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    right: unset;
+    height: 450px;
+    padding-top: 50px;
+  }
+  .content .order .form {
+    top: 50px;
+  }
+  .content .order-image {
+    height: auto;
+    width: 100%;
+    position: relative;
+    left: unset;
+    top: unset;
   }
 }
 /*# sourceMappingURL=styles.css.map */
