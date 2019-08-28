@@ -32,6 +32,10 @@ function selectMenu() {
 
 selectMenu()
 
+document.querySelector('.chevron-down').addEventListener('click', function() {
+  TweenMax.to(window, 2, {scrollTo:{y:'#content-container', offsetY:50}})
+})
+
 // var loadBackgroundAnim = new TimelineMax();
 var backgroundAnim = new TimelineMax(),
     controller = new ScrollMagic.Controller(),
