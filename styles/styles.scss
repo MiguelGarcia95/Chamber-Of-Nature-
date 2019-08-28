@@ -62,6 +62,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
   @include sizeAndPos(1000px, auto, relative);
   top: -50vh !important;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .content {
@@ -327,38 +328,90 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
 
 
 
-@media (max-width: 550px) {
-  .content-container {
-    // @include sizeAndPos(700px, auto, relative);
+@media (max-width: 750px) {
+  .header-content {
+    // @include sizeAndPos(100%, 100vh, absolute);
+    .book_title, .scroll-down {
+      // height: 100px;
+    }
+    .book_title {
+      font-size: 4rem;
+      // top: 15%;
+    }
+    .scroll-down {
+      // font-size: 2rem;
+      // top: 40%;
+      .chevron-down {
+        // font-size: 3rem;
+      }
+    }
+  }
+  .content-container {@include sizeAndPos(600px, auto, relative);}
+}
 
+@media (max-width: 650px) {
+  .content-container {@include sizeAndPos(500px, auto, relative);}
+  .content {padding: 0 0px;}
+}
+
+
+@media (max-width: 600px) {
+  .header-content {
+    .book_title {font-size: 3.5rem;}
+  }
+  .content-container {
+    @include sizeAndPos(100%, auto, relative);
+    padding: 0 25px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .header-content {
+    .book_title {font-size: 3rem;}
+    .scroll-down {font-size: 1.9rem;}
+  }
+}
+
+
+@media (max-width: 450px) {
+  .header-content {
+    .book_title {font-size: 3rem;}
+    .scroll-down {font-size: 1.9rem;}
+  }
+  .content-container {
+    // @include sizeAndPos(100%, auto, relative);
+    // padding: 0 25px;
 
     // top: -50vh !important;
     // margin: auto;
   }
 
   .content {
+  // padding: 0 0px;
+
     // left: 0%;
-    height: 600px;
-    height: auto;
+    // height: 600px;
+    // height: auto;
 
     .content-title{
-      font-size: 4rem;
-      left: unset;
-      text-align: center;
-      position: relative; 
+      // font-size: 4rem;
+      // left: unset;
+      // text-align: center;
+      // position: relative; 
 
     }
     .text-content {
-      // font-size: 1.2rem;
+      // font-size: 1rem;
     }
     .description {
-      @include sizeAndPos(100%, auto, relative);
+      // @include sizeAndPos(100%, auto, relative);
 
       // max-width: 500px;
       // left: 0%;
 
-      padding-top: 0px;
-      margin-top: 0;
+      // padding-top: 0px;
+      // margin-top: 0;
     
     }
     &.content-second {
@@ -367,43 +420,43 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     }
     .description-image {
       // @include sizeAndPos(650px, 100%, absolute);
-      @include sizeAndPos(75%, auto, relative);
-      right: unset;
-      top: unset; 
-      margin: auto;
-      padding: 25px 0;
+      // @include sizeAndPos(75%, auto, relative);
+      // right: unset;
+      // top: unset; 
+      // margin: auto;
+      // padding: 25px 0;
       // img {width: 100%;}
     }
     .setting {
-      @include sizeAndPos(100%, auto, relative);
+      // @include sizeAndPos(100%, auto, relative);
 
-      margin-top: 0;
+      // margin-top: 0;
       // left: 0%;
-      padding: 50px 0;
+      // padding: 50px 0;
 
     }
     &.content-third {
-      height: auto;
+      // height: auto;
       .content-title {
-        right: unset;
+        // right: unset;
         // width: 100%;
-        position: relative;
-        text-align: center;
+        // position: relative;
+        // text-align: center;
       }
     }
     .order {
       // @include sizeAndPos(50%, 100%, absolute);
       // @include sizeAndPos(45%, 100%, absolute);
-      @include sizeAndPos(100%, auto, relative);
-      text-align: center;
+      // @include sizeAndPos(100%, auto, relative);
+      // text-align: center;
 
-      right: unset;
-      height: 450px;
-      padding-top: 50px;
+      // right: unset;
+      // height: 450px;
+      // padding-top: 50px;
       .form {
         // @include sizeAndPos(75%, 200px, absolute);
         // margin: auto;
-        top: 50px; 
+        // top: 50px; 
         // left: 0; right: 0;
         // font-size: 1rem;
         input {
@@ -432,17 +485,21 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     }
     .order-image {
       // @include sizeAndPos(500px, auto, absolute);
-      @include sizeAndPos(100%, auto, relative);
+      // @include sizeAndPos(100%, auto, relative);
 
       // bottom: unset;
       // margin: auto;
-      left: unset;
+      // left: unset;
 
 
-      top: unset; 
+      // top: unset; 
       img {
         // @include sizeAndPos(100%, 100%, relative);
       }
     }
   }
 }
+
+
+
+

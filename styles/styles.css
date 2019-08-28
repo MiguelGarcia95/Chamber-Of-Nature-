@@ -84,6 +84,8 @@ body {
   position: relative;
   top: -50vh !important;
   margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .content {
@@ -462,66 +464,55 @@ body {
   }
 }
 
-@media (max-width: 550px) {
-  .content {
-    height: 600px;
-    height: auto;
-  }
-  .content .content-title {
+@media (max-width: 750px) {
+  .header-content .book_title {
     font-size: 4rem;
-    left: unset;
-    text-align: center;
+  }
+  .content-container {
+    height: auto;
+    width: 600px;
     position: relative;
   }
-  .content .description {
+}
+
+@media (max-width: 650px) {
+  .content-container {
+    height: auto;
+    width: 500px;
+    position: relative;
+  }
+  .content {
+    padding: 0 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content .book_title {
+    font-size: 3.5rem;
+  }
+  .content-container {
     height: auto;
     width: 100%;
     position: relative;
-    padding-top: 0px;
-    margin-top: 0;
+    padding: 0 25px;
   }
-  .content .description-image {
-    height: auto;
-    width: 75%;
-    position: relative;
-    right: unset;
-    top: unset;
-    margin: auto;
-    padding: 25px 0;
+}
+
+@media (max-width: 500px) {
+  .header-content .book_title {
+    font-size: 3rem;
   }
-  .content .setting {
-    height: auto;
-    width: 100%;
-    position: relative;
-    margin-top: 0;
-    padding: 50px 0;
+  .header-content .scroll-down {
+    font-size: 1.9rem;
   }
-  .content.content-third {
-    height: auto;
+}
+
+@media (max-width: 450px) {
+  .header-content .book_title {
+    font-size: 3rem;
   }
-  .content.content-third .content-title {
-    right: unset;
-    position: relative;
-    text-align: center;
-  }
-  .content .order {
-    height: auto;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    right: unset;
-    height: 450px;
-    padding-top: 50px;
-  }
-  .content .order .form {
-    top: 50px;
-  }
-  .content .order-image {
-    height: auto;
-    width: 100%;
-    position: relative;
-    left: unset;
-    top: unset;
+  .header-content .scroll-down {
+    font-size: 1.9rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
