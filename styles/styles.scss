@@ -11,33 +11,28 @@ html, body {margin: 0; padding: 0;}
 * {margin: 0; padding: 0;}
 
 body {background: rgb(29,29,58); overflow-x: hidden;}
+
+@mixin fullScreenPos($w, $h, $p) {
+  height: $h;
+  width: $w;
+  position: $p;
+}
+
 #header {
-  height: 100vh;
-  max-height: 100%;
-  width: 100%;
+  @include fullScreenPos(100%, 100vh, relative);
   overflow: hidden;
-  position: relative;
 }
 
 .header-background {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  max-height: 100%;
+  @include fullScreenPos(100%, 100vh, absolute);
   overflow: hidden;
   img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    @include fullScreenPos(100%, 100%, absolute);
     object-fit: cover;
   }
 }
 .header-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  height: 100vh;
-  max-height: 100%;
+  @include fullScreenPos(100%, 100vh, absolute);
   font-family: 'Fairy Dust B';
   text-align: center;
   .book_title, .scroll-down {
@@ -213,5 +208,6 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
   }
 }
 
-.footer {
+@media (max-width: 1400px) {
+
 }

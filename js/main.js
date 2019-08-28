@@ -68,7 +68,6 @@ backgroundAnim
   .to('.tree_08', 1, {scale: 0.7, transformOrigin: 'center bottom', autoAlpha: 0})
   .to('.firefly', 3, {transformOrigin: 'center top', scale: 0})
   .to('.floor_01', 1, {scale: 7, transformOrigin: 'center bottom'})
-  // .to(['.tree', '.mountain', sun], 0.1, {scale: 0})
   .to('.header-content', 1, {autoAlpha: 0})
   .to('.header-background', 1, {autoAlpha: 0})
 
@@ -81,5 +80,5 @@ var backgroundScene = new ScrollMagic.Scene({
 })
 .setTween(backgroundAnim)
 .setPin('.bg-trigger')
-.addIndicators()
+// .addIndicators()
 .addTo(controller);
