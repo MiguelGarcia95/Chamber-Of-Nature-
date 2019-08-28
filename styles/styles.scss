@@ -330,21 +330,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
 
 @media (max-width: 750px) {
   .header-content {
-    // @include sizeAndPos(100%, 100vh, absolute);
-    .book_title, .scroll-down {
-      // height: 100px;
-    }
-    .book_title {
-      font-size: 4rem;
-      // top: 15%;
-    }
-    .scroll-down {
-      // font-size: 2rem;
-      // top: 40%;
-      .chevron-down {
-        // font-size: 3rem;
-      }
-    }
+    .book_title {font-size: 4rem;}
   }
   .content-container {@include sizeAndPos(600px, auto, relative);}
 }
@@ -376,129 +362,32 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
 
 @media (max-width: 450px) {
   .header-content {
-    .book_title {font-size: 3rem;}
-    .scroll-down {font-size: 1.9rem;}
-  }
-  .content-container {
-    // @include sizeAndPos(100%, auto, relative);
-    // padding: 0 25px;
-
-    // top: -50vh !important;
-    // margin: auto;
+    .book_title {font-size: 2.5rem;}
+    .scroll-down {font-size: 1.5rem;}
   }
 
   .content {
-  // padding: 0 0px;
-
-    // left: 0%;
-    // height: 600px;
-    // height: auto;
-
-    .content-title{
-      // font-size: 4rem;
-      // left: unset;
-      // text-align: center;
-      // position: relative; 
-
-    }
-    .text-content {
-      // font-size: 1rem;
-    }
-    .description {
-      // @include sizeAndPos(100%, auto, relative);
-
-      // max-width: 500px;
-      // left: 0%;
-
-      // padding-top: 0px;
-      // margin-top: 0;
-    
-    }
-    &.content-second {
-      // padding-top: 50px;
-    
-    }
-    .description-image {
-      // @include sizeAndPos(650px, 100%, absolute);
-      // @include sizeAndPos(75%, auto, relative);
-      // right: unset;
-      // top: unset; 
-      // margin: auto;
-      // padding: 25px 0;
-      // img {width: 100%;}
-    }
-    .setting {
-      // @include sizeAndPos(100%, auto, relative);
-
-      // margin-top: 0;
-      // left: 0%;
-      // padding: 50px 0;
-
-    }
-    &.content-third {
-      // height: auto;
-      .content-title {
-        // right: unset;
-        // width: 100%;
-        // position: relative;
-        // text-align: center;
-      }
-    }
-    .order {
-      // @include sizeAndPos(50%, 100%, absolute);
-      // @include sizeAndPos(45%, 100%, absolute);
-      // @include sizeAndPos(100%, auto, relative);
-      // text-align: center;
-
-      // right: unset;
-      // height: 450px;
-      // padding-top: 50px;
-      .form {
-        // @include sizeAndPos(75%, 200px, absolute);
-        // margin: auto;
-        // top: 50px; 
-        // left: 0; right: 0;
-        // font-size: 1rem;
-        input {
-          // padding: 5px;
-          // height: 50px;
-          // width: 100%;
-          // margin: 10px 0;
-          // font-size: 1rem;
-        }
-        #select {
-          // height: 50px;
-          // margin: 10px 0;
-          &.open {
-            // height: 200px;
-          }
-          li {
-            // line-height: 50px;
-          }
-        }
-        button {
-          // height: 50px;
-          // font-size: 1rem;
-          // margin: 10px 0;
-        }
-      }
-    }
-    .order-image {
-      // @include sizeAndPos(500px, auto, absolute);
-      // @include sizeAndPos(100%, auto, relative);
-
-      // bottom: unset;
-      // margin: auto;
-      // left: unset;
-
-
-      // top: unset; 
-      img {
-        // @include sizeAndPos(100%, 100%, relative);
-      }
-    }
+    .content-title{font-size: 3rem;}
+    .text-content {font-size: 1rem;}
   }
 }
+
+
+@media (max-width: 400px) {
+  .header-content {
+    .book_title {font-size: 2.3rem;}
+    .scroll-down {
+      font-size: 1.5rem; 
+      .chevron-down{font-size: 2rem;}
+    }
+  }
+  .content {
+    .content-title{font-size: 2.5rem;}
+  }
+}
+
+
+
 
 
 

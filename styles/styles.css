@@ -509,10 +509,31 @@ body {
 
 @media (max-width: 450px) {
   .header-content .book_title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .header-content .scroll-down {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
+  }
+  .content .content-title {
+    font-size: 3rem;
+  }
+  .content .text-content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-content .book_title {
+    font-size: 2.3rem;
+  }
+  .header-content .scroll-down {
+    font-size: 1.5rem;
+  }
+  .header-content .scroll-down .chevron-down {
+    font-size: 2rem;
+  }
+  .content .content-title {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
