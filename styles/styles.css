@@ -380,52 +380,40 @@ body {
 @media (max-width: 950px) {
   .content-container {
     height: auto;
-    width: 800px;
+    width: 700px;
     position: relative;
   }
-  .content {
-    left: 0%;
-  }
   .content .content-title {
-    font-size: 4.5rem;
-    left: 0%;
-    position: absolute;
-  }
-  .content .description {
-    height: 100%;
-    width: 45%;
-    position: absolute;
-    left: 0%;
-    margin-top: 5rem;
+    font-size: 4rem;
   }
   .content.content-second {
-    padding-top: 30px;
-  }
-  .content .description-image {
-    height: 100%;
-    width: 650px;
-    position: absolute;
-    right: -20%;
-  }
-  .content .setting {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    margin-top: 5rem;
-    left: 0%;
+    padding-top: 50px;
   }
   .content.content-third .content-title {
-    right: 0%;
-  }
-  .content .order {
-    right: 0%;
+    right: -5%;
   }
   .content .order-image {
+    left: -15%;
+  }
+}
+
+@media (max-width: 850px) {
+  .content-container {
     height: auto;
-    width: 500px;
-    position: absolute;
-    bottom: unset;
-    left: -10%;
+    width: 700px;
+    position: relative;
+  }
+  .content .content-title {
+    font-size: 4rem;
+  }
+  .content.content-second {
+    padding-top: 50px;
+  }
+  .content.content-third .content-title {
+    right: -5%;
+  }
+  .content .order-image {
+    left: -15%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
