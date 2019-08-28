@@ -12,27 +12,27 @@ html, body {margin: 0; padding: 0;}
 
 body {background: rgb(29,29,58); overflow-x: hidden;}
 
-@mixin fullScreenPos($w, $h, $p) {
+@mixin sizeAndPos($w, $h, $p) {
   height: $h;
   width: $w;
   position: $p;
 }
 
 #header {
-  @include fullScreenPos(100%, 100vh, relative);
+  @include sizeAndPos(100%, 100vh, relative);
   overflow: hidden;
 }
 
 .header-background {
-  @include fullScreenPos(100%, 100vh, absolute);
+  @include sizeAndPos(100%, 100vh, absolute);
   overflow: hidden;
   img {
-    @include fullScreenPos(100%, 100%, absolute);
+    @include sizeAndPos(100%, 100%, absolute);
     object-fit: cover;
   }
 }
 .header-content {
-  @include fullScreenPos(100%, 100vh, absolute);
+  @include sizeAndPos(100%, 100vh, absolute);
   font-family: 'Fairy Dust B';
   text-align: center;
   .book_title, .scroll-down {
@@ -58,20 +58,17 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
 }
 
 .content-container {
-  position: relative;
+  @include sizeAndPos(1000px, auto, relative);
   top: -50vh !important;
-  width: 1000px;
   margin: auto;
 }
 .content {
-  width: 100%; 
-  height: 500px;
+  @include sizeAndPos(100%, 500px, relative);
   padding: 0 100px;
   box-sizing: border-box;
-  position: relative;
   color: white;
   margin-bottom: 50px;
-  .description, .description-image, .order, .order-image {position: absolute;}
+  .order, .order-image {position: absolute;}
   .content-title{
     font-size: 6rem;
     font-family: 'Fairy Dust B';
@@ -79,25 +76,19 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     color: #f2be79;
   }
   .text-content {
-    // font-family: 'Fairy Dust B';
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
   }
   .description {
-    width: 50%; 
+    @include sizeAndPos(50%, 100%, absolute);
     max-width: 500px;
-    height: 100%;
     padding-top: 50px;
   }
   .description-image {
-    width: 50%;
-    width: 800px;
+    @include sizeAndPos(800px, 100%, absolute);
     right: -25%;
     top: -20%; 
-    height: 100%;
-    img {
-      width: 100%;
-    }
+    img {width: 100%;}
   }
   .setting {
     width: 100%;
@@ -115,8 +106,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     }
   }
   .order {
-    width: 50%; 
-    height: 100%;
+    @include sizeAndPos(50%, 100%, absolute);
     right: 0%;
     text-align: center;
     padding-top: 50px;
@@ -130,10 +120,8 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
       text-transform: capitalize;
     }
     .form {
+      @include sizeAndPos(75%, 200px, absolute);
       margin: auto;
-      width: 75%;
-      height: 200px;
-      position: absolute;
       top: 150px; 
       left: 0; right: 0;
       // box-shadow: 0px -4px 5px 0px rgba(0,0,0,0.5);
@@ -142,8 +130,8 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
         background-color: #1d1d3a;
         padding: 5px;
         height: 50px;
-        margin: 0;
         width: 100%;
+        margin: 0;
         margin: 10px 0;
         text-align: center;
         border: none;
@@ -193,16 +181,14 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     }
   }
   .order-image {
-    width: 500px;
+    @include sizeAndPos(500px, auto, absolute);
     left: 50px;
-    // height: 400px;
     bottom: 0;
     margin: auto;
     left: -5%;
     top: -20%; 
     img {
-      width: 100%;
-      height: 100%;
+      @include sizeAndPos(100%, 100%, relative);
       object-fit: cover;
     }
   }

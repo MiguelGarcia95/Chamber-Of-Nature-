@@ -79,24 +79,25 @@ body {
 }
 
 .content-container {
+  height: auto;
+  width: 1000px;
   position: relative;
   top: -50vh !important;
-  width: 1000px;
   margin: auto;
 }
 
 .content {
-  width: 100%;
   height: 500px;
+  width: 100%;
+  position: relative;
   padding: 0 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative;
   color: white;
   margin-bottom: 50px;
 }
 
-.content .description, .content .description-image, .content .order, .content .order-image {
+.content .order, .content .order-image {
   position: absolute;
 }
 
@@ -113,18 +114,19 @@ body {
 }
 
 .content .description {
-  width: 50%;
-  max-width: 500px;
   height: 100%;
+  width: 50%;
+  position: absolute;
+  max-width: 500px;
   padding-top: 50px;
 }
 
 .content .description-image {
-  width: 50%;
+  height: 100%;
   width: 800px;
+  position: absolute;
   right: -25%;
   top: -20%;
-  height: 100%;
 }
 
 .content .description-image img {
@@ -147,8 +149,9 @@ body {
 }
 
 .content .order {
-  width: 50%;
   height: 100%;
+  width: 50%;
+  position: absolute;
   right: 0%;
   text-align: center;
   padding-top: 50px;
@@ -164,10 +167,10 @@ body {
 }
 
 .content .order .form {
-  margin: auto;
-  width: 75%;
   height: 200px;
+  width: 75%;
   position: absolute;
+  margin: auto;
   top: 150px;
   left: 0;
   right: 0;
@@ -178,8 +181,8 @@ body {
   background-color: #1d1d3a;
   padding: 5px;
   height: 50px;
-  margin: 0;
   width: 100%;
+  margin: 0;
   margin: 10px 0;
   text-align: center;
   border: none;
@@ -270,7 +273,9 @@ body {
 }
 
 .content .order-image {
+  height: auto;
   width: 500px;
+  position: absolute;
   left: 50px;
   bottom: 0;
   margin: auto;
@@ -279,8 +284,9 @@ body {
 }
 
 .content .order-image img {
-  width: 100%;
   height: 100%;
+  width: 100%;
+  position: relative;
   -o-object-fit: cover;
      object-fit: cover;
 }
