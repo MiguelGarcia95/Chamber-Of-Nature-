@@ -141,6 +141,12 @@ body {
 
 .content.content-third {
   text-align: right;
+  height: 600px;
+}
+
+.content.content-third .content-title {
+  right: -10%;
+  position: absolute;
 }
 
 .content .order {
@@ -169,6 +175,20 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  -webkit-box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.content .order .form input {
+  background-color: #1d1d3a;
+  padding: 5px;
+  height: 40px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .content .order .form #select {
@@ -191,7 +211,7 @@ body {
   width: 100%;
   list-style: none;
   line-height: 40px;
-  background-color: white;
+  background-color: #1d1d3a;
   cursor: pointer;
 }
 
@@ -205,8 +225,12 @@ body {
 
 .content .order .form button {
   width: 100%;
-  border: none;
   height: 40px;
+  border: none;
+  color: white;
+  background-color: #1d1d3a;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .content .order-image {
@@ -214,7 +238,7 @@ body {
   left: 50px;
   bottom: 0;
   margin: auto;
-  left: 0%;
+  left: -5%;
   top: -20%;
 }
 
