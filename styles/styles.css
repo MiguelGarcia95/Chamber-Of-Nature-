@@ -169,36 +169,68 @@ body {
 .content .order .form {
   margin: auto;
   width: 75%;
-  height: 80px;
+  height: 200px;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 150px;
   left: 0;
   right: 0;
-  -webkit-box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
 }
 
 .content .order .form input {
   background-color: #1d1d3a;
   padding: 5px;
-  height: 40px;
+  height: 50px;
   margin: 0;
   width: 100%;
+  margin: 10px 0;
   text-align: center;
   border: none;
+  font-size: 1rem;
+  outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-bottom: 1px solid #f2be79;
+}
+
+.content .order .form input::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.content .order .form input:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.content .order .form input::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.content .order .form input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.content .order .form input:-ms-input-placeholder {
+  color: white;
+}
+
+.content .order .form input::-ms-input-placeholder {
+  color: white;
 }
 
 .content .order .form #select {
-  height: 40px;
+  height: 50px;
   overflow: hidden;
   position: relative;
+  margin: 10px 0;
+  border-bottom: 1px solid #f2be79;
 }
 
 .content .order .form #select.open {
-  height: 160px;
+  height: 200px;
 }
 
 .content .order .form #select.open li {
@@ -210,7 +242,7 @@ body {
   z-index: 2;
   width: 100%;
   list-style: none;
-  line-height: 40px;
+  line-height: 50px;
   background-color: #1d1d3a;
   cursor: pointer;
 }
@@ -225,12 +257,19 @@ body {
 
 .content .order .form button {
   width: 100%;
-  height: 40px;
+  height: 50px;
   border: none;
   color: white;
   background-color: #1d1d3a;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px 0;
+  outline: none;
+  background: #f2be79;
+  color: #1d1d3a;
+  font-weight: bold;
 }
 
 .content .order-image {
