@@ -223,34 +223,89 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
 }
 
 @media (max-width: 1050px) {
+  .content-container {@include sizeAndPos(800px, auto, relative);}
   .content {
-    left: -5%;
+    left: 0%;
+    .content-title{
+      font-size: 4.5rem;
+      left: 0%;
+      position: absolute;
+    }
+    .description {
+      @include sizeAndPos(45%, 100%, absolute);
+      left: 0%;
+      margin-top: 5rem;
+    }
+    &.content-second {padding-top: 30px;}
+    .description-image {
+      @include sizeAndPos(650px, 100%, absolute);
+      right: -20%;
+    }
+    .setting {
+      @include sizeAndPos(100%, 100%, absolute);
+      margin-top: 5rem;
+      left: 0%;
+    }
+    &.content-third {
+      .content-title {right: 0%;}
+    }
+    .order {right: 0%;}
+    .order-image {
+      @include sizeAndPos(500px, auto, absolute);
+      bottom: unset;
+      left: -10%;
+    }
+  }
+}
+
+
+@media (max-width: 950px) {
+  .content-container {
+    @include sizeAndPos(800px, auto, relative);
+    // top: -50vh !important;
+    // margin: auto;
+  }
+
+  .content {
+    left: 0%;
 
 
     .content-title{
-      font-size: 5rem;
+      font-size: 4.5rem;
+      left: 0%;
+      position: absolute;
     }
     .text-content {
       // font-size: 1.2rem;
     }
     .description {
-      // @include sizeAndPos(50%, 100%, absolute);
+      @include sizeAndPos(45%, 100%, absolute);
       // max-width: 500px;
+      left: 0%;
       // padding-top: 50px;
+      margin-top: 5rem;
+    }
+    &.content-second {
+      padding-top: 30px;
     }
     .description-image {
-      @include sizeAndPos(700px, 100%, absolute);
-      right: -15%;
+      @include sizeAndPos(650px, 100%, absolute);
+      right: -20%;
       // top: -20%; 
       // img {width: 100%;}
     }
     .setting {
+      @include sizeAndPos(100%, 100%, absolute);
+      margin-top: 5rem;
+      left: 0%;
+
+
       // padding-top: 50px;
     }
     &.content-third {
       // height: 600px;
       .content-title {
-        right: -3%;
+        right: 0%;
 
 
 
@@ -258,7 +313,8 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     }
     .order {
       // @include sizeAndPos(50%, 100%, absolute);
-      // right: 0%;
+      // @include sizeAndPos(45%, 100%, absolute);
+      right: 0%;
       // padding-top: 50px;
       
       .form {
@@ -292,10 +348,10 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
       }
     }
     .order-image {
-      @include sizeAndPos(400px, auto, absolute);
-      // bottom: 0;
+      @include sizeAndPos(500px, auto, absolute);
+      bottom: unset;
       // margin: auto;
-      left: 7%;
+      left: -10%;
 
 
       // top: -20%; 
