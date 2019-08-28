@@ -12,10 +12,10 @@ html, body {margin: 0; padding: 0;}
 
 body {background: rgb(29,29,58); overflow-x: hidden;}
 
-@mixin sizeAndPos($w, $h, $p) {
-  height: $h;
-  width: $w;
-  position: $p;
+@mixin sizeAndPos($width, $height, $position) {
+  height: $height;
+  width: $width;
+  position: $position;
 }
 
 #header {
