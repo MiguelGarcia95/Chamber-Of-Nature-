@@ -279,4 +279,13 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+@media (max-width: 1400px) {
+  .content.content-third .content-title {
+    right: -5%;
+  }
+  .content .order-image {
+    left: -10%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
