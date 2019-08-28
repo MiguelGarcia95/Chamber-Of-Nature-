@@ -31,6 +31,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     object-fit: cover;
   }
 }
+
 .header-content {
   @include sizeAndPos(100%, 100vh, absolute);
   font-family: 'Fairy Dust B';
@@ -62,6 +63,7 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
   top: -50vh !important;
   margin: auto;
 }
+
 .content {
   @include sizeAndPos(100%, 500px, relative);
   padding: 0 100px;
@@ -94,9 +96,9 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     width: 100%;
     padding-top: 50px;
   }
-  .setting-images {
-    // Add Flora here 
-  }
+  // .setting-images {
+  //   // Add Flora here 
+  // }
   &.content-third {
     text-align: right;
     height: 600px;
@@ -110,15 +112,6 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
     right: 0%;
     text-align: center;
     padding-top: 50px;
-    
-    h3 {
-      font-family: 'Fairy Dust B';
-      font-size: 2rem;
-      padding: 20px 0;
-      color: white;
-      letter-spacing: 2px;
-      text-transform: capitalize;
-    }
     .form {
       @include sizeAndPos(75%, 200px, absolute);
       margin: auto;
@@ -131,7 +124,6 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
         padding: 5px;
         height: 50px;
         width: 100%;
-        margin: 0;
         margin: 10px 0;
         text-align: center;
         border: none;
@@ -182,7 +174,6 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
   }
   .order-image {
     @include sizeAndPos(500px, auto, absolute);
-    left: 50px;
     bottom: 0;
     margin: auto;
     left: -5%;
@@ -195,5 +186,77 @@ body {background: rgb(29,29,58); overflow-x: hidden;}
 }
 
 @media (max-width: 1400px) {
-
+  .content {
+    .content-title{
+      // font-size: 6rem;
+    }
+    .text-content {
+      // font-size: 1.2rem;
+    }
+    .description {
+      // @include sizeAndPos(50%, 100%, absolute);
+      // max-width: 500px;
+      // padding-top: 50px;
+    }
+    .description-image {
+      // @include sizeAndPos(800px, 100%, absolute);
+      // right: -25%;
+      // top: -20%; 
+      // img {width: 100%;}
+    }
+    .setting {
+      // padding-top: 50px;
+    }
+    &.content-third {
+      // height: 600px;
+      .content-title {
+        // right: -10%;
+      }
+    }
+    .order {
+      // @include sizeAndPos(50%, 100%, absolute);
+      // right: 0%;
+      // padding-top: 50px;
+      
+      .form {
+        // @include sizeAndPos(75%, 200px, absolute);
+        // margin: auto;
+        // top: 150px; 
+        // left: 0; right: 0;
+        // font-size: 1rem;
+        input {
+          // padding: 5px;
+          // height: 50px;
+          // width: 100%;
+          // margin: 10px 0;
+          // font-size: 1rem;
+        }
+        #select {
+          // height: 50px;
+          // margin: 10px 0;
+          &.open {
+            // height: 200px;
+          }
+          li {
+            // line-height: 50px;
+          }
+        }
+        button {
+          // height: 50px;
+          // font-size: 1rem;
+          // margin: 10px 0;
+        }
+      }
+    }
+    .order-image {
+      // @include sizeAndPos(500px, auto, absolute);
+      // bottom: 0;
+      // margin: auto;
+      // left: -5%;
+      // top: -20%; 
+      img {
+        // @include sizeAndPos(100%, 100%, relative);
+      }
+    }
+  }
 }
