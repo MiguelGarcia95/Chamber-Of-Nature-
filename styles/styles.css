@@ -390,19 +390,14 @@ body {
     padding-top: 50px;
   }
   .content.content-third .content-title {
-    right: -5%;
+    right: -3%;
   }
   .content .order-image {
-    left: -15%;
+    left: -18%;
   }
 }
 
 @media (max-width: 850px) {
-  .content-container {
-    height: auto;
-    width: 700px;
-    position: relative;
-  }
   .content .content-title {
     font-size: 4rem;
   }
@@ -410,10 +405,7 @@ body {
     padding-top: 50px;
   }
   .content.content-third .content-title {
-    right: -5%;
-  }
-  .content .order-image {
-    left: -15%;
+    right: -3%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
